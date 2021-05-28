@@ -1,13 +1,14 @@
 //import express
 import express from "express";
 
+//import router
+import router from './routes/routes.js';
+
 //init express
 const app = express();
 
-//basic route
-app.get('/', (req, res)=>{
-    res.send('Hello World!');
-})
+//user router
+app.use(router);
 
 //listen port
 app.listen(3000, () => {
