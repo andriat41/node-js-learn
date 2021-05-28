@@ -1,18 +1,13 @@
 import express from 'express';
+import {Home, Contact, About} from '../controller/index.js';
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.send('Welcome Home Page!');
-})
+router.get('/', Home)
 
-router.get('/about', (req, res) => {
-    res.send('Welcome to about page!');
-})
+router.get('/about', Contact)
 
-router.get('/contact', (req, res) => {
-    res.send('Welcome to contact page!');
-})
+router.get('/contact', About)
 
 
 export default router;
